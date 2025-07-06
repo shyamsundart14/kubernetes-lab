@@ -1,4 +1,4 @@
-# kubernetes-lab
+# Kubernetes-lab
 
 ## Lab hosts
 
