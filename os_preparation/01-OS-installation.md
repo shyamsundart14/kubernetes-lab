@@ -1,4 +1,4 @@
-# OS preparation steps
+# OS installation
 
 Ubuntu 24.04 ARM64 image has been used to install VMs on UTM.
 
