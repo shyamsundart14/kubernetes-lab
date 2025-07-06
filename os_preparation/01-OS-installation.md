@@ -7,3 +7,5 @@ Network mode - Bridged(Advanced).
 Bridged interface - en0 (you need to choose your wireless interface here).
 
 Emulated network card - virtio-net-pci.
+
+Disk space - 40GB.
