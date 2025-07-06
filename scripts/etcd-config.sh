@@ -1,3 +1,4 @@
+mkdir -pv /etc/systemd/system/kubelet.service.d/
 cat << EOF > /etc/systemd/system/kubelet.service.d/kubelet.conf
 # Replace "systemd" with the cgroup driver of your container runtime. The default value in the kubelet is "cgroupfs".
 # Replace the value of "containerRuntimeEndpoint" for a different container runtime if needed.
