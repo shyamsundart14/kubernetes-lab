@@ -41,7 +41,6 @@ Enable APT repo
 
 echo "deb http://nginx.org/packages/mainline/ubuntu `lsb_release -cs` nginx"|sudo tee /etc/apt/sources.list.d/nginx.list
 
-apt install nginx -y
 
 systemctl stop systemd-resolved
 
