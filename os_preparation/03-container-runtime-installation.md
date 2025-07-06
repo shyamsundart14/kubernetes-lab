@@ -1,4 +1,4 @@
-Here containerd is used as container runtime since our kubernetes cluster will be of version 1.31. 
+Here containerd is used as container runtime  and kubernetes cluster will be of version 1.31. 
 
 https://kubernetes.io/docs/setup/production-environment/container-runtimes/
 
