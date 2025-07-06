@@ -11,3 +11,5 @@ kubeadm init phase certs etcd-ca
 Two files ca.crt and ca.key will be created under /etc/kubernetes/pki/etcd/ folder
 
 Generate certificates for each etcd member using script [here](https://github.com/shyamsundart14/kubernetes-lab/blob/main/scripts/generate_certs.sh).
+
+Copy over the generated kubeadm config file and certificates using script [here](https://github.com/shyamsundart14/kubernetes-lab/blob/main/scripts/copy_certs.sh).
