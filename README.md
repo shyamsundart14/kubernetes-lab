@@ -1,5 +1,5 @@
 # Kubernetes-lab
-This repository walks you through the process of setting up a highly available kubernetes cluster with external etcd nodes. There are two control nodes behind a nginx reverse proxy and three worker nodes to host applications. 
+This repository walks you through the process of setting up a highly available kubernetes cluster with three external etcd nodes. There are two control nodes behind a nginx reverse proxy and three worker nodes to host applications. 
 
 ## Lab hosts
 
