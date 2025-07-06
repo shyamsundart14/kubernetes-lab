@@ -15,4 +15,4 @@ This repository walks you through the process of setting up a highly available k
 | worker2  | 192.168.68.17 |
 | worker3  | 192.168.68.16 |
 
-Please note that these VMs are deployed on top of UTM and Ubuntu 24.04 ARM64 image.
+Please note that these VMs are deployed on top of UTM using Ubuntu 24.04 ARM64 image.
