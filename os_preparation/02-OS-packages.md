@@ -25,3 +25,7 @@ ssh-keygen -b 4096 -t rsa
 Hit enter to keep the default names.
 
 Distribute the generated public key to all machines using below command.
+
+ssh-copy-id root@lb
+
+Here lb is used as a reverse proxy to load balance traffic between two control plane nodes master1 and master2.
