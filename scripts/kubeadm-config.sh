@@ -1,12 +1,12 @@
-# Update HOST0, HOST1 and HOST2 with the IPs of your hosts
-export HOST0=10.0.0.6
-export HOST1=10.0.0.7
-export HOST2=10.0.0.8
+# Update HOST0, HOST1 and HOST2 with the IPs of your etcd hosts
+export HOST0=192.168.68.13
+export HOST1=192.168.68.14
+export HOST2=192.168.68.15
 
 # Update NAME0, NAME1 and NAME2 with the hostnames of your hosts
-export NAME0="infra0"
-export NAME1="infra1"
-export NAME2="infra2"
+export NAME0="etcd"
+export NAME1="etcd2"
+export NAME2="etcd3"
 
 # Create temp directories to store files that will end up on other hosts
 mkdir -p /tmp/${HOST0}/ /tmp/${HOST1}/ /tmp/${HOST2}/
