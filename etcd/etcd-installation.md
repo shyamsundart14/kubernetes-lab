@@ -16,3 +16,16 @@ Copy over the generated kubeadm config file and certificates using script [here]
 
 After copying over, the kubeadmcfg.yaml file should be under /tmp directory and other certificate files should be under /etc/kubernetes/pki and /etc/kubernetes/pki/etcd/ directory.
 
+Next, initialize static etcd pods on all the nodes.
+
+On first node,
+
+kubeadm init phase etcd local --config=/tmp/kubeadmcfg.yaml
+
+On second node,
+
+kubeadm init phase etcd local --config=/tmp/kubeadmcfg.yaml
+
+On third node,
+
+kubeadm init phase etcd local --config=/tmp/kubeadmcfg.yaml
