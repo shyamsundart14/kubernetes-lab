@@ -29,3 +29,6 @@ Distribute the generated public key to all machines using below command.
 ssh-copy-id root@lb
 
 Here lb is used as a reverse proxy to load balance traffic between two control plane nodes master1 and master2.
+
+## On lb machine which will also be used as template VM to spin up other VMs
+apt install curl gnupg2 ca-certificates lsb-release ubuntu-keyring
