@@ -1,6 +1,6 @@
-Do these steps from lb server.
+Configure kubelet to be the service manager for etcd. Use the script [here](https://github.com/shyamsundart14/kubernetes-lab/blob/main/scripts/etcd-config.sh). This needs to be done on nodes etcd1, etcd2 & etcd3.
 
-Configure kubelet to be the service manager for etcd. Use the script [here](https://github.com/shyamsundart14/kubernetes-lab/blob/main/scripts/etcd-config.sh)
+**Do these steps from lb server.**
 
 Create configuration files for kubeadm using script [here](https://github.com/shyamsundart14/kubernetes-lab/blob/main/scripts/kubeadm-config.sh)
 
