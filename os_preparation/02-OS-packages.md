@@ -16,3 +16,12 @@ systemctl restart ssh
 
 systemctl status ssh #Ensure ssh service is running
 
+Change your root password by running **passwd root**
+
+On your MAC machine, generate a new key pair.
+
+ssh-keygen -b 4096 -t rsa 
+
+Hit enter to keep the default names.
+
+Distribute the generated public key to all machines using below command.
