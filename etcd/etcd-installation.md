@@ -15,3 +15,19 @@ Generate certificates for each etcd member using script [here](https://github.co
 Copy over the generated kubeadm config file and certificates using script [here](https://github.com/shyamsundart14/kubernetes-lab/blob/main/scripts/copy_certs.sh).
 
 After copying over, the kubeadmcfg.yaml file should be under /tmp directory and other certificate files should be under /etc/kubernetes/pki and /etc/kubernetes/pki/etcd/ directory.
+
+tree
+.
+├── manifests
+└── pki
+    ├── apiserver-etcd-client.crt
+    ├── apiserver-etcd-client.key
+    └── etcd
+        ├── ca.crt
+        ├── ca.key
+        ├── healthcheck-client.crt
+        ├── healthcheck-client.key
+        ├── peer.crt
+        ├── peer.key
+        ├── server.crt
+        └── server.key
