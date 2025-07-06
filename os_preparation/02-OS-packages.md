@@ -43,3 +43,13 @@ echo "deb http://nginx.org/packages/mainline/ubuntu `lsb_release -cs` nginx"|sud
 
 apt install nginx -y
 
+systemctl stop systemd-resolved
+
+systemctl disable systemd-resolved
+
+rm /etc/resolv.conf
+
+echo "nameserver 8.8.8.8" > /etc/resolv.conf
+
+echo "nameserver 1.1.1.1" >> /etc/resolv.conf
+
