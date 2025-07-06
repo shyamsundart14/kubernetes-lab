@@ -7,3 +7,5 @@ Generate certificate authority for etcd using below command.
 kubeadm init phase certs etcd-ca
 
 Two files ca.crt and ca.key will be created under /etc/kubernetes/pki/etcd/ folder
+
+Generate certificates for each etcd member using script [here](https://github.com/shyamsundart14/kubernetes-lab/blob/main/scripts/generate_certs.sh).
