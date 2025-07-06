@@ -34,7 +34,9 @@ Here lb is used as a reverse proxy to load balance traffic between two control p
 apt install curl gnupg2 ca-certificates lsb-release ubuntu-keyring
 Import GPG key used in package signing.
 curl  -fsSL https://nginx.org/keys/nginx_signing.key|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/nginx.gpg
+
 Enable APT repo
 echo "deb http://nginx.org/packages/mainline/ubuntu `lsb_release -cs` nginx"|sudo tee /etc/apt/sources.list.d/nginx.list
+
 apt install nginx -y
 
