@@ -13,3 +13,5 @@ Two files ca.crt and ca.key will be created under /etc/kubernetes/pki/etcd/ fold
 Generate certificates for each etcd member using script [here](https://github.com/shyamsundart14/kubernetes-lab/blob/main/scripts/generate_certs.sh).
 
 Copy over the generated kubeadm config file and certificates using script [here](https://github.com/shyamsundart14/kubernetes-lab/blob/main/scripts/copy_certs.sh).
+
+After copying over, the kubeadmcfg.yaml file should be under /tmp directory and other certificate files should be under /etc/kubernetes/pki and /etc/kubernetes/pki/etcd/ directory.
