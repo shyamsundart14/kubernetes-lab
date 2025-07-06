@@ -58,3 +58,8 @@ tar Cxzvf /opt/cni/bin cni-plugins-linux-arm-v1.7.0.tgz
 tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v1.4.0.tgz
 
 Set SystemdCgroup = true in file /etc/containerd/config.toml under [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
+
+systemctl restart containerd
+
+systemctl status containerd
+
