@@ -12,32 +12,15 @@ for dir in "$BASE_DIR"/192.168.*; do
   echo "==> Copying files to $IP..."
 
   # Create required directories on remote host
-  ssh -o BatchMode=yes "$REMOTE_USER@$IP" "mkdir -p $PKI_PATH/etcd" || {
-    echo "❌ Failed to SSH into $IP. Skipping..."
-    continue
-  }
+  ssh "$REMOTE_USER@$IP" "mkdir -p $PKI_PATH/etcd"
 
   # Copy kubeadm config to /tmp
-  scp -o BatchMode=yes "$dir/kubeadmcfg.yaml" "$REMOTE_USER@$IP:$TMP_PATH/" || {
-    echo "❌ Failed to copy kubeadmcfg.yaml to $IP"
-    continue
-  }
+  scp "$dir/kubeadmcfg.yaml" "$REMOTE_USER@$IP:$TMP_PATH/"
 
   # Copy certificates
-  scp -o BatchMode=yes "$dir/pki/apiserver-etcd-client.crt" "$REMOTE_USER@$IP:$PKI_PATH/" || {
-    echo "❌ Failed to copy apiserver-etcd-client.crt to $IP"
-    continue
-  }
+  scp "$dir/pki/apiserver-etcd-client.crt" "$REMOTE_USER@$IP:$PKI_PATH/"
+  scp "$dir/pki/apiserver-etcd-client.key" "$REMOTE_USER@$IP:$PKI_PATH/"
+  scp -r "$dir/pki/etcd" "$REMOTE_USER@$IP:$PKI_PATH/"
 
-  scp -o BatchMode=yes "$dir/pki/apiserver-etcd-client.key" "$REMOTE_USER@$IP:$PKI_PATH/" || {
-    echo "❌ Failed to copy apiserver-etcd-client.key to $IP"
-    continue
-  }
-
-  scp -o BatchMode=yes -r "$dir/pki/etcd" "$REMOTE_USER@$IP:$PKI_PATH/" || {
-    echo "❌ Failed to copy etcd directory to $IP"
-    continue
-  }
-
-  echo "✅ Finished copying to $IP."
+  echo "==> Finished copying to $IP."
 done
