@@ -11,3 +11,13 @@ sysctl --system
 Verify that net.ipv4.ip_forward is set to 1 with:
 
 sysctl net.ipv4.ip_forward
+
+Both overlay and br_netfilter are essential for the proper functioning of container networking and filesystem layering. Lets make sure they are loaded during boot.
+
+cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
+overlay
+br_netfilter
+EOF
+
+modprobe overlay
+modprobe br_netfilter
