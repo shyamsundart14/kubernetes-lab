@@ -11,6 +11,8 @@ PermitRootLogin yes
 Enable and restart ssh service
 
 systemctl enable ssh
+
 systemctl restart ssh
+
 systemctl status ssh #Ensure ssh service is running
 
